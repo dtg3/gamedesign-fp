@@ -8,7 +8,8 @@ public class FallingPlatform : MonoBehaviour {
 		transform.rigidbody2D.gravityScale = 0;
 	}
 
-	void OnCollisionEnter2D() {
-		transform.rigidbody2D.gravityScale = 5f;
+	void OnCollisionEnter2D(Collision2D collision) {
+		if (collision.gameObject.tag == "Player")
+			transform.rigidbody2D.gravityScale = 5f;
 	}
 }
