@@ -12,3 +12,11 @@
 /*.userprefs
 /*.pidb
 /*.booproj
+runner/*.csproj
+runner/*.unityproj
+runner/*.sln
+runner/*.suo
+runner/*.user
+runner/*.userprefs
+runner/*.pidb
+runner/*.booproj
