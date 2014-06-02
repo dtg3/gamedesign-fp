@@ -40,7 +40,7 @@ public class FallingPlatform : MonoBehaviour {
 	public IEnumerator Fall() {
 		yield return new WaitForSeconds(.4f);
 		trapActive = false;
-		Rigidbody2D trap = this.gameObject.AddComponent<Rigidbody2D> (); //This introduces a warning, but hasn't b
-		trap.gravityScale = 5f;
+		rigidbody2D.isKinematic = false;
+		rigidbody2D.gravityScale = 5f;
 	}
 }
