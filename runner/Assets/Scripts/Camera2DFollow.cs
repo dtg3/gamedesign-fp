@@ -4,11 +4,11 @@ using System.Collections;
 public class Camera2DFollow : MonoBehaviour {
 	
 	public Transform target;
-	public float damping = 1;
-	public float lookAheadFactor = 3;
-	public float lookAheadReturnSpeed = 0.5f;
+	public float damping = 0.3f;
+	public float lookAheadFactor = 7f;
+	public float lookAheadReturnSpeed = 5f;
 	public float lookAheadMoveThreshold = 0.1f;
-	public bool autorun = true;
+	public bool autorun = false;
 	public float autoOffset = 5f;
 	
 	float offsetZ;
