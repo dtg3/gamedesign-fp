@@ -20,6 +20,8 @@ public class PlatformerCharacter2D : MonoBehaviour
 	float ceilingRadius = .01f;							// Radius of the overlap circle to determine if the player can stand up
 	Animator anim;										// Reference to the player's animator component.
 
+	bool doubleJump = false;
+
 
     void Awake()
 	{
@@ -35,6 +37,9 @@ public class PlatformerCharacter2D : MonoBehaviour
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
 		anim.SetBool("Ground", grounded);
+
+		if (grounded)
+			doubleJump = false;
 
 		// Set the vertical animation
 		anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
@@ -79,10 +84,12 @@ public class PlatformerCharacter2D : MonoBehaviour
 		}
 
         // If the player should jump...
-        if (grounded && jump) {
+        if ((grounded || !doubleJump) && jump) {
             // Add a vertical force to the player.
             anim.SetBool("Ground", false);
             rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+			if (!grounded)
+				doubleJump = true;
         }
 	}
 
