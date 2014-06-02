@@ -30,6 +30,11 @@ public class Camera2DFollow : MonoBehaviour {
 			transform.position = new Vector3(target.position.x + autoOffset, target.position.y, -10);
 		else
 			transform.position = directionalRunner();
+
+		if (lookAheadPos.y - Screen.height / 2.0 > target.position.y)
+			lookAheadPos.y = target.position.y;
+		else if (lookAheadPos.y + Screen.height / 2.0 < target.position.y)
+			lookAheadPos.y = target.position.y;
 		
 	}
 
@@ -44,6 +49,7 @@ public class Camera2DFollow : MonoBehaviour {
 		} else {
 			lookAheadPos = Vector3.MoveTowards(lookAheadPos, Vector3.zero, Time.deltaTime * lookAheadReturnSpeed);	
 		}
+
 		
 		Vector3 aheadTargetPos = target.position + lookAheadPos + Vector3.forward * offsetZ;
 		Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref currentVelocity, damping);
