@@ -32,9 +32,9 @@ public class Camera2DFollow : MonoBehaviour {
 			transform.position = directionalRunner();
 
 		if (lookAheadPos.y - Screen.height / 2.0 > target.position.y)
-			lookAheadPos.y = target.position.y;
-		else if (lookAheadPos.y + Screen.height / 2.0 < target.position.y)
-			lookAheadPos.y = target.position.y;
+						transform.position = new Vector3 (transform.position.x, target.position.y, -10f);
+				else if (lookAheadPos.y + Screen.height / 2.0 < target.position.y)
+						transform.position = new Vector3 (transform.position.x, target.position.y, -10f);
 		
 	}
 
