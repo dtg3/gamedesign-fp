@@ -3,7 +3,7 @@ using System.Collections;
 
 public class NinjaController : MonoBehaviour {
 	public float maxSpeed = 10f;
-	bool facingRight = true;
+	bool facingRight = true; //Weird
 	Animator anim;
 
 	bool grounded = false;
