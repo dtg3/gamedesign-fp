@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: dee65f618dc5a43fbbce4266f6823f21
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: NinjaRun1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1264
+        width: 139
+        height: 221
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaRun2
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1256
+        width: 132
+        height: 221
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaRun3
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1253
+        width: 118
+        height: 221
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaRun4
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 1261
+        width: 124
+        height: 221
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaRun5
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 1273
+        width: 115
+        height: 221
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaRun6
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1265
+        width: 116
+        height: 221
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaRun7
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1256
+        width: 117
+        height: 221
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaRun8
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 1252
+        width: 117
+        height: 221
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaRun9
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 1256
+        width: 133
+        height: 221
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaRun10
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 1271
+        width: 145
+        height: 221
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaJump4
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 834
+        width: 162
+        height: 218
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaJump5
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 932
+        width: 206
+        height: 113
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaJump6
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 840
+        width: 176
+        height: 189
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaJump7
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 763
+        width: 216
+        height: 172
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaJump1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 659
+        width: 116
+        height: 219
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaJump2
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 659
+        width: 120
+        height: 208
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaJump3
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 692
+        width: 134
+        height: 223
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaJump8
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 664
+        width: 133
+        height: 213
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaJump9
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 650
+        width: 142
+        height: 194
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaJump10
+      rect:
+        serializedVersion: 2
+        x: 2169
+        y: 663
+        width: 133
+        height: 216
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaBackFlip1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 13
+        width: 118
+        height: 218
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaBackFlip2
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 13
+        width: 122
+        height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaBackFlip3
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 50
+        width: 151
+        height: 218
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaBackFlip4
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 172
+        width: 213
+        height: 139
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaBackFlip5
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 197
+        width: 159
+        height: 183
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaBackFlip6
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 176
+        width: 184
+        height: 157
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaBackFlip7
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 59
+        width: 173
+        height: 189
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaBackFlip8
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 13
+        width: 123
+        height: 222
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaBackFlip9
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 13
+        width: 116
+        height: 203
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: NinjaBackFlip10
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 13
+        width: 119
+        height: 217
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
