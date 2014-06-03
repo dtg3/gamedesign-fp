@@ -13,8 +13,10 @@ public class NinjaController : MonoBehaviour {
 	public float jumpForce = 275f;
 
 	bool landed = true;
-
+	bool idleAnim = false;
 	bool doubleJump = false;
+
+	float timer = 5f;
 
 	// Use this for initialization
 	void Start () {
@@ -48,6 +50,19 @@ public class NinjaController : MonoBehaviour {
 			Flip ();
 		else if (move < 0 && facingRight)
 			Flip();
+
+		if (rigidbody2D.velocity.x > 0 || rigidbody2D.velocity.y > 0) {
+			timer = 5f;
+			idleAnim = false;
+		}
+		else {
+			timer -= Time.deltaTime;
+		}
+		
+		if (timer <= 0)
+			idleAnim = true;
+
+		anim.SetBool("IdleAnim", idleAnim);
 	}
 
 	void Update() {
