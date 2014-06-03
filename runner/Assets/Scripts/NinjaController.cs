@@ -12,6 +12,8 @@ public class NinjaController : MonoBehaviour {
 	public LayerMask whatIsGround;
 	public float jumpForce = 700f;
 
+	bool doubleJump = false;
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -20,6 +22,10 @@ public class NinjaController : MonoBehaviour {
 	void FixedUpdate () {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 		anim.SetBool ("Ground", grounded);
+
+		if (grounded)
+			doubleJump = false;
+
 		anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 
 		float move = Input.GetAxis ("Horizontal");
@@ -32,9 +38,12 @@ public class NinjaController : MonoBehaviour {
 	}
 
 	void Update() {
-		if (grounded && Input.GetKeyDown(KeyCode.Space)) {
+		if ((grounded || !doubleJump) && Input.GetKeyDown(KeyCode.Space)) {
 			anim.SetBool("Ground", false);
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));
+
+			if (!doubleJump && !grounded)
+				doubleJump = true;
 		}
 	}
 
