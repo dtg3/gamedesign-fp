@@ -21,16 +21,16 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -44,6 +44,231 @@ TextureImporter:
     textureFormat: -2
     compressionQuality: 50
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: PirateRun1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1027
+        width: 177
+        height: 236
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateRun2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1020
+        width: 163
+        height: 236
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateRun3
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1021
+        width: 166
+        height: 236
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateRun4
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 1025
+        width: 165
+        height: 236
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateRun5
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1030
+        width: 180
+        height: 236
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateRun6
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1019
+        width: 173
+        height: 236
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateRun7
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 1017
+        width: 169
+        height: 236
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateRun8
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 1034
+        width: 169
+        height: 236
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateJump1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 612
+        width: 166
+        height: 283
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateJump2
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 611
+        width: 167
+        height: 283
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateJump3
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 608
+        width: 165
+        height: 283
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateJump4
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 600
+        width: 190
+        height: 283
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateJump5
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 604
+        width: 197
+        height: 283
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateJump8
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 606
+        width: 220
+        height: 283
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateJump9
+      rect:
+        serializedVersion: 2
+        x: 2215
+        y: 612
+        width: 161
+        height: 283
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateJump6
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 607
+        width: 225
+        height: 283
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateJump7
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 611
+        width: 262
+        height: 283
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateVictory1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 243
+        width: 169
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateVictory2
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 244
+        width: 179
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateVictory3
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 243
+        width: 187
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateVictory4
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 243
+        width: 236
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateVictory5
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 244
+        width: 260
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateVictory6
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 244
+        width: 185
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateVictory7
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 244
+        width: 208
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: PirateVictory8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 239
+        width: 265
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
