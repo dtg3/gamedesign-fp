@@ -10,7 +10,9 @@ public class NinjaController : MonoBehaviour {
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
-	public float jumpForce = 700f;
+	public float jumpForce = 275f;
+
+	bool landed = true;
 
 	bool doubleJump = false;
 
@@ -21,7 +23,18 @@ public class NinjaController : MonoBehaviour {
 
 	void FixedUpdate () {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
+	
+		if (grounded && !landed) {
+			anim.SetTrigger("Landed");
+			landed = true;
+		}
+
+		if (!grounded)
+			landed = false;
+
+
 		anim.SetBool ("Ground", grounded);
+
 
 		if (grounded)
 			doubleJump = false;
