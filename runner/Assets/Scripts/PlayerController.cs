@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour {
 	public static bool dead = false;
 	
 	float timer = 5f;
+
+	public static bool isNinja = true;
 	
 	// Use this for initialization
 	void Start () {

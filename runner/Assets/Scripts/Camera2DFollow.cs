@@ -10,7 +10,9 @@ public class Camera2DFollow : MonoBehaviour {
 	public float lookAheadMoveThreshold = 0.1f;
 	public bool autorun = false;
 	public float autoOffset = 5f;
-	
+	public AudioClip ninja;
+	public AudioClip pirate;
+
 	float offsetZ;
 	Vector3 lastTargetPosition;
 	Vector3 currentVelocity;
@@ -57,5 +59,11 @@ public class Camera2DFollow : MonoBehaviour {
 		lastTargetPosition = target.position;
 
 		return newPos;
+	}
+
+	void playMusic()
+	{
+		if(PlayerController.isNinja)
+
 	}
 }
