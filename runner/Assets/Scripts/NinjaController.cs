@@ -69,7 +69,7 @@ public class NinjaController : MonoBehaviour {
 		}
 		else
 		{
-			anim.Trigger("Dead");
+			anim.SetTrigger("Dead");
 		}
 	}
 
