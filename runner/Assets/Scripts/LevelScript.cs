@@ -24,7 +24,7 @@ public class LevelScript : MonoBehaviour
 		if(sceneStarting)
 			// ... call the StartScene function.
 			StartScene();
-		if(NinjaController.dead)
+		if(PlayerController.dead)
 		{
 			EndScene();
 			lives--;
@@ -77,7 +77,7 @@ public class LevelScript : MonoBehaviour
 		{
 			// ... reload the level.
 			sceneStarting = true;
-			NinjaController.dead = false;
+			PlayerController.dead = false;
 			Application.LoadLevel("Bathroom");
 		}
 
