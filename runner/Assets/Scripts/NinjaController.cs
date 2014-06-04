@@ -16,7 +16,7 @@ public class NinjaController : MonoBehaviour {
 	bool idleAnim = false;
 	bool doubleJump = false;
 
-	bool dead = false;
+	public static bool dead = false;
 
 	float timer = 5f;
 
@@ -95,7 +95,6 @@ public class NinjaController : MonoBehaviour {
 		if (other.gameObject.tag == "Spike" && !dead) 
 		{
 			dead = true;
-			Debug.Log ("Dead");
 		}
 	}
 }
