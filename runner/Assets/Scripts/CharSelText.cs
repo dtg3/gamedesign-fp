@@ -3,13 +3,14 @@ using System.Collections;
 
 public class CharSelText : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+	Animator anim;
+	public static int text = 0;
 	
+	void Start() {
+		anim = GetComponent<Animator>();
+		text = 0;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	void Update() {
+		anim.SetInteger("Selected", text);
 	}
 }

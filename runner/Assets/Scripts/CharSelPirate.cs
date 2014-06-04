@@ -3,13 +3,29 @@ using System.Collections;
 
 public class CharSelPirate : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+	Animator anim;
+	bool over = false;
 	
+	void Start() {
+		anim = GetComponent<Animator>();
+	}
+	void Update() {
+		anim.SetBool("Over", over);
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void OnMouseEnter ()
+	{
+		over = true;
+		CharSelText.text = 2;
+	}
 	
+	void OnMouseExit () 
+	{
+		over = false;
+		CharSelText.text = 0;
+	}
+	
+	void OnMouseDown () {
+		//Application.LoadLevel ("");
 	}
 }
