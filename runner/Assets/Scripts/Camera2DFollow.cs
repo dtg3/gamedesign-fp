@@ -10,6 +10,7 @@ public class Camera2DFollow : MonoBehaviour {
 	public float lookAheadMoveThreshold = 0.1f;
 	public bool autorun = false;
 	public float autoOffset = 5f;
+
 	public AudioClip ninja;
 	public AudioClip pirate;
 
@@ -23,11 +24,13 @@ public class Camera2DFollow : MonoBehaviour {
 		lastTargetPosition = target.position;
 		offsetZ = (transform.position - target.position).z;
 		transform.parent = null;
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
+	void Update () 
+	{
+		playMusic();
 		if(autorun)
 			transform.position = new Vector3(target.position.x + autoOffset, target.position.y, -10);
 		else
@@ -37,7 +40,6 @@ public class Camera2DFollow : MonoBehaviour {
 						transform.position = new Vector3 (transform.position.x, target.position.y, -10f);
 				else if (lookAheadPos.y + Screen.height / 2.0 < target.position.y)
 						transform.position = new Vector3 (transform.position.x, target.position.y, -10f);
-		
 	}
 
 	Vector3 directionalRunner() {
@@ -64,6 +66,12 @@ public class Camera2DFollow : MonoBehaviour {
 	void playMusic()
 	{
 		if(PlayerController.isNinja)
+			audio.clip = ninja;
 
+		if(!PlayerController.isNinja)
+			audio.clip = pirate;
+
+		if (!audio.isPlaying)
+			audio.Play ();
 	}
 }

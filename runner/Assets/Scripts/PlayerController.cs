@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
+		if (gameObject.name == "Pirate")
+						isNinja = false;
 	}
 	
 	void FixedUpdate () {
