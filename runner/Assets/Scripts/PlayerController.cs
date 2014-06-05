@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 	public AudioClip idle;
 
 	bool idlePlayed = false;
+	bool finishPlayed =false;
 	
 	// Use this for initialization
 	void Start () {
@@ -122,9 +123,10 @@ public class PlayerController : MonoBehaviour {
 			audio.PlayOneShot(fail);
 		}
 
-		if (other.gameObject.tag == "Finish")
+		if (other.gameObject.tag == "Finish" && !finishPlayed)
 		{
 			audio.PlayOneShot(win);
+			finishPlayed = true;
 		}
 	}
 }
