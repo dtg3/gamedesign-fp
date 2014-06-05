@@ -24,6 +24,12 @@ public class ClickAnimator : MonoBehaviour {
 	}
 
 	void OnMouseDown () {
-		//Application.LoadLevel ("");
+		if (this.gameObject.tag == "Comic1") {
+			//Application.LoadLevel ("");
+		}
+		
+		if (this.gameObject.tag == "Title") {
+			//Application.LoadLevel ("");
+		}
 	}
 }
