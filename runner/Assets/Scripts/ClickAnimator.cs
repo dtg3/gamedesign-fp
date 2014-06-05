@@ -25,11 +25,11 @@ public class ClickAnimator : MonoBehaviour {
 
 	void OnMouseDown () {
 		if (this.gameObject.tag == "Comic1") {
-			//Application.LoadLevel ("");
+			Application.LoadLevel ("Bathroom");
 		}
 		
 		if (this.gameObject.tag == "Title") {
-			//Application.LoadLevel ("");
+			Application.LoadLevel ("CharacterSelect");
 		}
 	}
 }
