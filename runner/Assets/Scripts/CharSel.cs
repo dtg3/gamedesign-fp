@@ -33,6 +33,13 @@ public class CharSel : MonoBehaviour {
 	}
 	
 	void OnMouseDown () {
+		if (this.gameObject.tag == "PirateSelect") {
+
+		}
+		
+		if (this.gameObject.tag == "NinjaSelect") {
+
+		}
 		//Application.LoadLevel ("");
 	}
 }
