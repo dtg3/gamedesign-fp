@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharSelPirate : MonoBehaviour {
+public class CharSel : MonoBehaviour {
 
 	Animator anim;
 	bool over = false;
@@ -15,8 +15,15 @@ public class CharSelPirate : MonoBehaviour {
 	
 	void OnMouseEnter ()
 	{
-		over = true;
-		CharSelText.text = 2;
+		if (this.gameObject.tag == "PirateSelect") {
+			over = true;
+			CharSelText.text = 2;
+		}
+		
+		if (this.gameObject.tag == "NinjaSelect") {
+			over = true;
+			CharSelText.text = 1;
+		}
 	}
 	
 	void OnMouseExit () 
