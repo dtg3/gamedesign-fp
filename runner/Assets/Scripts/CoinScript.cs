@@ -15,8 +15,12 @@ public class CoinScript : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		PlayerController.score++;
-		audio.Play ();
-		Destroy (gameObject);
+		if (other.gameObject.tag == "Player")
+		{
+			PlayerController.score++;
+
+			audio.Play ();
+			Destroy(gameObject);
+		}
 	}
 }
