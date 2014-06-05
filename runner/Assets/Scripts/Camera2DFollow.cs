@@ -14,6 +14,10 @@ public class Camera2DFollow : MonoBehaviour {
 	public AudioClip ninja;
 	public AudioClip pirate;
 
+	public AudioClip ninjaGo;
+	public AudioClip pirateGo;
+	bool startPlayed = false;
+
 	float offsetZ;
 	Vector3 lastTargetPosition;
 	Vector3 currentVelocity;
@@ -72,6 +76,14 @@ public class Camera2DFollow : MonoBehaviour {
 			audio.clip = pirate;
 
 		if (!audio.isPlaying)
-			audio.Play ();
+			audio.Play();
+		if (!startPlayed)
+		{
+			if(PlayerController.isNinja)
+				audio.PlayOneShot(ninjaGo);
+			else
+				audio.PlayOneShot(pirateGo);
+			startPlayed = true;
+		}
 	}
 }

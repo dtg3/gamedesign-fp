@@ -21,6 +21,12 @@ public class PlayerController : MonoBehaviour {
 	float timer = 5f;
 
 	public static bool isNinja = true;
+
+	public AudioClip fail;
+	public AudioClip win;
+	public AudioClip idle;
+
+	bool idlePlayed = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -62,12 +68,20 @@ public class PlayerController : MonoBehaviour {
 			if (rigidbody2D.velocity.x > 0 || rigidbody2D.velocity.y > 0) {
 				timer = 5f;
 				idleAnim = false;
+				idlePlayed = false;
 			} else {
 				timer -= Time.deltaTime;
 			}
 			
 			if (timer <= 0)
+			{
 				idleAnim = true;
+				if(!idlePlayed)
+				{
+					audio.PlayOneShot(idle);
+					idlePlayed = true;
+				}
+			}
 			
 			anim.SetBool ("IdleAnim", idleAnim);
 			
@@ -105,6 +119,12 @@ public class PlayerController : MonoBehaviour {
 		if (other.gameObject.tag == "Spike" && !dead) 
 		{
 			dead = true;
+			audio.PlayOneShot(fail);
+		}
+
+		if (other.gameObject.tag == "Finish")
+		{
+			audio.PlayOneShot(win);
 		}
 	}
 }
