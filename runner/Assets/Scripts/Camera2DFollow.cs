@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Camera2DFollow : MonoBehaviour {
 	
-	public Transform target;
+	public Transform target = null;
 	public float damping = 0.3f;
 	public float lookAheadFactor = 7f;
 	public float lookAheadReturnSpeed = 5f;
@@ -25,12 +25,13 @@ public class Camera2DFollow : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		target = GameObject.FindWithTag ("Player").transform;
 		lastTargetPosition = target.position;
 		offsetZ = (transform.position - target.position).z;
 		transform.parent = null;
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () 
 	{
