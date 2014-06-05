@@ -7,7 +7,6 @@ public class LevelScript : MonoBehaviour
 	public GameObject player;
 	public int lives = 3;
 	
-	
 	private bool sceneStarting = true;      // Whether or not the scene is still fading in.
 	
 	
@@ -80,12 +79,23 @@ public class LevelScript : MonoBehaviour
 			// ... reload the level.
 			sceneStarting = true;
 			PlayerController.dead = false;
-			Application.LoadLevel("Bathroom");
+
+			if (Level.number == 1)
+				Application.LoadLevel("Bathroom");
+			else if (Level.number == 2)
+				Application.LoadLevel("Hallway");
+			else
+				Application.LoadLevel("EndScene");
 		}
 		else if (guiTexture.color.a >= 0.95f && PlayerController.finishPlayed)
 		{
-			Application.LoadLevel ("Hallway");
+			++Level.number;
+			if (Level.number == 1)
+				Application.LoadLevel("Bathroom");
+			else if (Level.number == 2)
+				Application.LoadLevel("Hallway");
+			else
+				Application.LoadLevel("EndScene");
 		}
-
 	}
 }
