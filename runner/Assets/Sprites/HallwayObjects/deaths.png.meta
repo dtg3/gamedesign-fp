@@ -24,13 +24,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -44,6 +44,42 @@ TextureImporter:
     textureFormat: -2
     compressionQuality: 50
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: death_cactus
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 38
+        width: 210
+        height: 393
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: death_jacks
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 32
+        width: 315
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: interact_ball
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 33
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: death_mousetrap
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 33
+        width: 454
+        height: 51
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
