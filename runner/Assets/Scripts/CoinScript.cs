@@ -3,24 +3,29 @@ using System.Collections;
 
 public class CoinScript : MonoBehaviour {
 
+	bool collected = false;
+
 	// Use this for initialization
 	void Start () {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		if (collected && !audio.isPlaying)
+			Destroy (gameObject);
 	
 	}
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (other.gameObject.tag == "Player")
+		if (other.gameObject.tag == "Player" && !collected)
 		{
 			PlayerController.score++;
-
 			audio.Play ();
-			Destroy(gameObject);
+			collected = true;
+			gameObject.renderer.enabled = false;
 		}
 	}
 }
