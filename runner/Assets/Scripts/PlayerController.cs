@@ -27,7 +27,9 @@ public class PlayerController : MonoBehaviour {
 	public AudioClip idle;
 
 	bool idlePlayed = false;
-	bool finishPlayed =false;
+	bool finishPlayed = false;
+
+	public static int score = 0;
 	
 	// Use this for initialization
 	void Start () {
@@ -123,10 +125,19 @@ public class PlayerController : MonoBehaviour {
 			audio.PlayOneShot(fail);
 		}
 
-		if (other.gameObject.tag == "Finish" && !finishPlayed)
+		if (other.gameObject.tag == "Finish" && !finishPlayed && score >= 5)
 		{
 			audio.PlayOneShot(win);
 			finishPlayed = true;
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.tag == "Spike" && !dead)
+		{
+			dead = true;
+			audio.PlayOneShot(fail);
 		}
 	}
 }
