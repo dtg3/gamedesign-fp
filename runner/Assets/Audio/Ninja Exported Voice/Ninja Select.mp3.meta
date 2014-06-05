@@ -1,15 +1,11 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: fccc839d932194f33b2b7fcbb3c368f5
-=======
-guid: a022a99479352465ab50a92c8dbb9660
->>>>>>> FETCH_HEAD
 AudioImporter:
   serializedVersion: 4
   format: 0
-  quality: -1
+  quality: .5
   stream: 1
-  3D: 1
+  3D: 0
   forceToMono: 0
   useHardware: 0
   loopable: 0
