@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
 	public AudioClip idle;
 
 	bool idlePlayed = false;
-	bool finishPlayed = false;
+	public static bool finishPlayed = false;
 
 	public static int score = 0;
 	

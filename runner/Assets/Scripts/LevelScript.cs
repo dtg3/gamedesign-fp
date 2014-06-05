@@ -29,6 +29,8 @@ public class LevelScript : MonoBehaviour
 			EndScene();
 			lives--;
 		}
+		if (PlayerController.finishPlayed)
+			EndScene ();
 	}
 	
 	
@@ -73,12 +75,16 @@ public class LevelScript : MonoBehaviour
 		FadeToBlack();
 		
 		// If the screen is almost black...
-		if(guiTexture.color.a >= 0.95f)
+		if(guiTexture.color.a >= 0.95f && PlayerController.dead)
 		{
 			// ... reload the level.
 			sceneStarting = true;
 			PlayerController.dead = false;
 			Application.LoadLevel("Bathroom");
+		}
+		else if (guiTexture.color.a >= 0.95f && PlayerController.finishPlayed)
+		{
+			Application.LoadLevel ("Hallway");
 		}
 
 	}
