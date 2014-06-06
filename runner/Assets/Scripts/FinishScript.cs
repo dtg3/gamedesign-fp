@@ -15,7 +15,7 @@ public class FinishScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if(other.gameObject.tag == "Player" && PlayerController.score >= 5)
+		if(other.gameObject.tag == "Player" && PlayerController.finishPlayed)
 		{
 			gameObject.tag = "Untagged";
 		}
