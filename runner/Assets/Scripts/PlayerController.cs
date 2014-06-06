@@ -34,11 +34,14 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
-		if (gameObject.name == "Pirate")
-						isNinja = false;
 	}
 	
 	void FixedUpdate () {
+		if (CharSel.selectedCharacter == 0)
+			isNinja = true;
+		else
+			isNinja = false;
+
 		if (!dead) 
 		{
 			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);

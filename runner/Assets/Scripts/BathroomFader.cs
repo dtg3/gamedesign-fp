@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LevelScript : MonoBehaviour
+public class BathroomFader : MonoBehaviour
 {
 	public float fadeSpeed = 1.5f;          // Speed that the screen fades to and from black.
-	public GameObject player;
 	public int lives = 3;
-	
 	private bool sceneStarting = true;      // Whether or not the scene is still fading in.
 	
 	
+	void Start ()
+	{
+		sceneStarting = true;
+	}
+
 	void Awake ()
 	{
 		// Set the texture so that it is the the size of the screen and covers it.
@@ -79,11 +82,15 @@ public class LevelScript : MonoBehaviour
 			// ... reload the level.
 			sceneStarting = true;
 			PlayerController.dead = false;
-			Application.LoadLevel("Hallway");
+			Application.LoadLevel("Bathroom");
+			//Debug.Log("Bathroom");
 		}
 		else if (guiTexture.color.a >= 0.95f && PlayerController.finishPlayed)
 		{
-			Application.LoadLevel ("Endscene");
+			PlayerController.score = 0;
+			PlayerController.finishPlayed = false;
+			Application.LoadLevel ("Hallway");
+			//Debug.Log ("Hallway");
 		}
 
 	}

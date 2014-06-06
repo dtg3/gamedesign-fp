@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LevelScriptHall : MonoBehaviour
+public class HallwayFader : MonoBehaviour
 {
 	public float fadeSpeed = 1.5f;          // Speed that the screen fades to and from black.
 	public int lives = 3;
@@ -9,7 +9,7 @@ public class LevelScriptHall : MonoBehaviour
 	private bool sceneStarting = true;      // Whether or not the scene is still fading in.
 	
 	
-	void Start ()
+	void Start()
 	{
 		sceneStarting = true;
 	}
@@ -83,11 +83,13 @@ public class LevelScriptHall : MonoBehaviour
 			// ... reload the level.
 			sceneStarting = true;
 			PlayerController.dead = false;
-			Application.LoadLevel("Bathroom");
+			Application.LoadLevel("Hallway");
 		}
 		else if (guiTexture.color.a >= 0.95f && PlayerController.finishPlayed)
 		{
-			Application.LoadLevel ("Hallway");
+			PlayerController.score = 0;
+			PlayerController.finishPlayed = false;
+			Application.LoadLevel("Endscene");
 		}
 
 	}
