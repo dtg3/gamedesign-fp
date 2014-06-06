@@ -1,5 +1,5 @@
-Fun Size
-=============
+# Fun Size
+**Final Project for The University of Akron Game Design Course**
 
 ## Graphic Designers:
 * Erik Leib
