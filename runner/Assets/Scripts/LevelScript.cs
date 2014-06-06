@@ -79,23 +79,12 @@ public class LevelScript : MonoBehaviour
 			// ... reload the level.
 			sceneStarting = true;
 			PlayerController.dead = false;
-
-			if (Level.number == 1)
-				Application.LoadLevel("Bathroom");
-			else if (Level.number == 2)
-				Application.LoadLevel("Hallway");
-			else
-				Application.LoadLevel("EndScene");
+			Application.LoadLevel("Bathroom");
 		}
 		else if (guiTexture.color.a >= 0.95f && PlayerController.finishPlayed)
 		{
-			++Level.number;
-			if (Level.number == 1)
-				Application.LoadLevel("Bathroom");
-			else if (Level.number == 2)
-				Application.LoadLevel("Hallway");
-			else
-				Application.LoadLevel("EndScene");
+			Application.LoadLevel ("Hallway");
 		}
+
 	}
 }
