@@ -17,7 +17,7 @@ public class FinishScript : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "Player" && PlayerController.score >= 5)
 		{
-			gameObject.tag = "Default";
+			gameObject.tag = "Untagged";
 			Debug.Break();
 		}
 		else
