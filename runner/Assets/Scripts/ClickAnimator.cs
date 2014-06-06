@@ -31,5 +31,9 @@ public class ClickAnimator : MonoBehaviour {
 		if (this.gameObject.tag == "Title") {
 			Application.LoadLevel ("CharacterSelect");
 		}
+
+		if (this.gameObject.tag == "Menu") {
+			Application.LoadLevel ("Title");
+		}
 	}
 }
