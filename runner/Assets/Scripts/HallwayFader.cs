@@ -83,6 +83,7 @@ public class HallwayFader : MonoBehaviour
 			// ... reload the level.
 			sceneStarting = true;
 			PlayerController.dead = false;
+			PlayerController.score = 0;
 			Application.LoadLevel("Hallway");
 		}
 		else if (guiTexture.color.a >= 0.95f && PlayerController.finishPlayed)

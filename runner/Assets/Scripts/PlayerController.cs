@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
 	public static bool finishPlayed = false;
 
 	public static int score = 0;
-	
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();

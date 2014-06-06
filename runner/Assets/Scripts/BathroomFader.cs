@@ -82,6 +82,7 @@ public class BathroomFader : MonoBehaviour
 			// ... reload the level.
 			sceneStarting = true;
 			PlayerController.dead = false;
+			PlayerController.score = 0;
 			Application.LoadLevel("Bathroom");
 			//Debug.Log("Bathroom");
 		}
